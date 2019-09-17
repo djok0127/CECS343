@@ -157,3 +157,6 @@ MonoBehaviour:
   impactEffect: {fileID: 7741603386894437369, guid: f977ed6d23e1ab74289fd717e6858e6b,
     type: 3}
   rb: {fileID: 6617180604183251145}
+  playerLocation: {fileID: 1197326655800341969, guid: 5b3fcd60e9c7b18408793b2cde7d6009,
+    type: 3}
+  destroyDistance: 70

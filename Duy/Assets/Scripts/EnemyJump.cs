@@ -28,6 +28,8 @@ public class EnemyJump : MonoBehaviour
     {
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         //atEdge = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsEdge);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        atEdge = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsEdge);
         if (isGrounded && atEdge && target.position.y - transform.position.y> yDistanceBeforeJumping)
         {
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
@@ -40,9 +42,5 @@ public class EnemyJump : MonoBehaviour
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
         }
     }
-    void FixedUpdate()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        atEdge = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsEdge);
-    }
+    
 }

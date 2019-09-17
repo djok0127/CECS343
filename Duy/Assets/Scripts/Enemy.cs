@@ -4,29 +4,24 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health = 100;
+    [SerializeField] private StatEnemy hitPoint;
+    public float maxHealth = 100f;
+    private float currentHealth;
+    public float damageDealt = 10f;
     public GameObject deathEffect;
-    public float knockBackPwr = 1000f;
-    public Rigidbody2D rb;
+    
     private float oldPosition;
-    void Start()
+   
+    void Awake()
     {
-        oldPosition = transform.position.x;
+        currentHealth = maxHealth;
+        hitPoint.Initialize(maxHealth, maxHealth);
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
-        health -= damage;
-        if (transform.position.x > oldPosition)
-        {
-            rb.AddForce(new Vector2(transform.position.x-knockBackPwr, transform.position.y));
-        }
-        else if (transform.position.x < oldPosition)
-        {
-            rb.AddForce(new Vector2(transform.position.x + knockBackPwr, transform.position.y));
-        }
-        oldPosition = transform.position.x;
-        //rb.AddForce(new Vector2(transform.position.x * knockBackPwr, transform.position.y));
-        if (health <= 0)
+        currentHealth -= damage;
+        hitPoint.MyCurrentValue = currentHealth;
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -36,4 +31,14 @@ public class Enemy : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag.Equals("Death"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+
 }
