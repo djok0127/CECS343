@@ -5,25 +5,30 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     private bool isDead = false;
-    //private bool isGrounded;
+    private bool isGrounded;
     public Transform fireCheck;
     public float checkRadius;
-    //public LayerMask whatIsGround;
+    public LayerMask whatIsGround;
     public LayerMask whatIsFire;
     void Update()
     {
 
-        if (isDead)
+        /*if (isDead)
         {
-            transform.position = new Vector2(0, 0);
-        }
+            public static bool GameIsPaused = true;
+			public GameObject deadMessage;
+        }*/
     }
-
-
 
     void FixedUpdate()
     {
         isDead = Physics2D.OverlapCircle(fireCheck.position, checkRadius, whatIsFire);
     }
+	
+	/*void pause ()
+	{
+		deadMessage.SetActive(true);
+	}
+	*/
 }
 
