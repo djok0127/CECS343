@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - coin
+  - Coins
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Ground
   - Fire
   - Edge
-  - 
+  - Coins
   - 
   - 
   - 
@@ -46,6 +48,9 @@ TagManager:
     locked: 0
   - name: Front
     uniqueID: 3743217487
+    locked: 0
+  - name: Coins
+    uniqueID: 825150005
     locked: 0
   - name: BeforeGround
     uniqueID: 750822559
