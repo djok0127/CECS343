@@ -260,6 +260,11 @@ PrefabInstance:
       propertyPath: damageDealt
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5823282115922131669, guid: befefe9af626c794bac11e4fda3dd5b3,
+        type: 3}
+      propertyPath: points
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: befefe9af626c794bac11e4fda3dd5b3, type: 3}
 --- !u!4 &148626915 stripped
@@ -595,6 +600,7 @@ RectTransform:
   - {fileID: 1085222502}
   - {fileID: 1805225862}
   - {fileID: 1142564681}
+  - {fileID: 1872730275}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1210,15 +1216,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: testingform
       objectReference: {fileID: 0}
+    - target: {fileID: 3428944341182965331, guid: c15c6b53f3cd8ae498d3dafb6f8337ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     - target: {fileID: 3428944341182965328, guid: c15c6b53f3cd8ae498d3dafb6f8337ee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 524.10114
+      value: 534.3
       objectReference: {fileID: 0}
     - target: {fileID: 3428944341182965328, guid: c15c6b53f3cd8ae498d3dafb6f8337ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 77.66249
+      value: 69.4
       objectReference: {fileID: 0}
     - target: {fileID: 3428944341182965328, guid: c15c6b53f3cd8ae498d3dafb6f8337ee,
         type: 3}
@@ -1876,7 +1887,7 @@ GameObject:
   - component: {fileID: 1591833281}
   - component: {fileID: 1591833286}
   - component: {fileID: 1591833285}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Eagle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1890,7 +1901,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591833280}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bb81a6686bc9f245b5a0884a87f6bd8, type: 3}
   m_Name: 
@@ -2032,6 +2043,7 @@ MonoBehaviour:
   hitPoint: {fileID: 1824485488}
   maxHealth: 1000
   damageDealt: 10
+  points: 20000
   deathEffect: {fileID: 1466651648032658253, guid: 3540280ac0053bd4eb7f5d5e08c136f7,
     type: 3}
 --- !u!1 &1642752119
@@ -2464,6 +2476,106 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c15c6b53f3cd8ae498d3dafb6f8337ee, type: 3}
+--- !u!1 &1872730274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872730275}
+  - component: {fileID: 1872730277}
+  - component: {fileID: 1872730276}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1872730275
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872730274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 239015802}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -333.16, y: 150.95001}
+  m_SizeDelta: {x: 129.68, y: 37.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1872730276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872730274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9528302, g: 0.91237986, b: 0.91237986, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: cfa2552e28c574b4184ef291c463e1f9, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Score
+--- !u!222 &1872730277
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872730274}
+  m_CullTransparentMesh: 0
+--- !u!1 &1884619754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3428944341182965331, guid: c15c6b53f3cd8ae498d3dafb6f8337ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 1052021356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1884619758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884619754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a571158e785698f40ba59e44c6fab760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceRight: 100
+  distanceUp: 0
+  speed: 20
 --- !u!1 &1953643264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,7 +3016,7 @@ PrefabInstance:
     - target: {fileID: 1197326655800341969, guid: 5b3fcd60e9c7b18408793b2cde7d6009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.084682
+      value: 82.2
       objectReference: {fileID: 0}
     - target: {fileID: 1197326655800341969, guid: 5b3fcd60e9c7b18408793b2cde7d6009,
         type: 3}
@@ -2986,6 +3098,11 @@ PrefabInstance:
       propertyPath: knockBacky
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1197326655800341968, guid: 5b3fcd60e9c7b18408793b2cde7d6009,
+        type: 3}
+      propertyPath: jumpVelocity
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 1197326655918834547, guid: 5b3fcd60e9c7b18408793b2cde7d6009,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3011,6 +3128,11 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 1197326655800341980, guid: 5b3fcd60e9c7b18408793b2cde7d6009,
+        type: 3}
+      propertyPath: pointText
+      value: 
+      objectReference: {fileID: 1872730276}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3fcd60e9c7b18408793b2cde7d6009, type: 3}
 --- !u!1001 &3428944341982939899
@@ -3163,6 +3285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -63.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564544223016469553, guid: d822f8ad3a2a7f543962c07a17d00e8f,
+        type: 3}
+      propertyPath: points
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d822f8ad3a2a7f543962c07a17d00e8f, type: 3}

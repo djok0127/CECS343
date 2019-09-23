@@ -8,12 +8,14 @@ public class Enemy : MonoBehaviour
     public float maxHealth = 100f;
     private float currentHealth;
     public float damageDealt = 10f;
+    public int points;
     public GameObject deathEffect;
-    
+    private Player playerScore;
     private float oldPosition;
    
     void Awake()
     {
+        playerScore= GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         currentHealth = maxHealth;
         hitPoint.Initialize(maxHealth, maxHealth);
     }
@@ -23,6 +25,7 @@ public class Enemy : MonoBehaviour
         hitPoint.MyCurrentValue = currentHealth;
         if (currentHealth <= 0)
         {
+            playerScore.MyPoints = points;
             Die();
         }
     }

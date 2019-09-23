@@ -5,13 +5,15 @@ using UnityEngine;
 public class Police : MonoBehaviour
 {
     public float attackRange;
+    public Transform firePoint;
+    public GameObject bulletPrefab;
     private float damage;
     public float speed;
     private float lastAttackTime;
     public float attackDelay;
     
     private bool facingRight = true;
-    private float oldPosition = 0f;
+    //private float oldPosition = 0f;
     private Transform targetPosition;
     private Player player;
     private Rigidbody2D rb;
@@ -48,17 +50,18 @@ public class Police : MonoBehaviour
             {
                 animator.SetFloat("speed", speed);
                 animator.SetBool("meleeAttack", false);
+                //Shoot();
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition.position, speed * Time.deltaTime);
             }
-            if (transform.position.x > oldPosition && !facingRight)
+            if (transform.position.x < targetPosition.position.x && !facingRight)
             {
                 Flip();
             }
-            else if (transform.position.x < oldPosition && facingRight)
+            else if (transform.position.x > targetPosition.position.x && facingRight)
             {
                 Flip();
             }
-            oldPosition = transform.position.x;
+            //oldPosition = transform.position.x;
         }
 
     }
@@ -91,6 +94,17 @@ public class Police : MonoBehaviour
             animator.SetBool("meleeAttack", false);
         }   
     }
+    /*void Shoot()
+    {
+        if (Time.time > lastAttackTime + attackDelay)
+        {
+            lastAttackTime = Time.time;
+            animator.SetBool("shooting", true);
+            animator.SetFloat("speed", 0f);
+            animator.SetBool("meleeAttacking", false);
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
+    }*/
     
     private IEnumerator PlayAnimInterval(int n, float time)
     {

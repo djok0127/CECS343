@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Player : MonoBehaviour
     public Animator animator;
     private bool isHurt = false;
     private Enemy enemy;
+
+    private int points = 0;
+    [SerializeField]private Text pointText;
+
     public float delayTime;
     private float curTime = 0;
     void Start()
@@ -19,6 +24,19 @@ public class Player : MonoBehaviour
         health.Initialize(maxHealth, maxHealth);
         currentHealth = maxHealth;
     }
+    public int MyPoints
+    {
+        get
+        {
+            return points;
+        }
+        set
+        {
+            points += value;
+            pointText.text = "Scores: " + points;
+        }
+    }
+
     public void TakeDamage(float damage)
     {
         currentHealth = currentHealth - damage;
@@ -63,6 +81,17 @@ public class Player : MonoBehaviour
         {
             curTime -= Time.deltaTime;
             
+        }
+        if (col.gameObject.tag.Equals("Platform"))
+        {
+            transform.parent = col.transform;
+        }
+    }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag.Equals("Platform"))
+        {
+            transform.parent = null;
         }
     }
 }

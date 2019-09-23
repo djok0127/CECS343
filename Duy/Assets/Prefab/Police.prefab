@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 6674644633883775586}
   - component: {fileID: 6674644633883775615}
   - component: {fileID: 6674644633883775608}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Police
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -305,8 +305,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -551749809
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6adffe761cc59bf47b07d362986f7e6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -420,6 +420,7 @@ MonoBehaviour:
   hitPoint: {fileID: 6674644633090462009}
   maxHealth: 30
   damageDealt: 3
+  points: 10
   deathEffect: {fileID: 329252642569197169, guid: 6d2d29f3326f1e94dbe2042acb6fba13,
     type: 3}
 --- !u!1 &6674644634747299707
