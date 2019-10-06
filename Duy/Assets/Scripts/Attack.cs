@@ -6,6 +6,8 @@ public class Attack : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject vortexPrefab;
+    public RectTransform canvasTransform;
     private Player player;
     void Start()
     {
@@ -17,14 +19,23 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            CombatTextManager.Instance.CreateText(transform.position,"Fire!",Color.red);
+            CombatTextManager.Instance.CreateText(transform.position,"Fire!",Color.red, canvasTransform);
             Shoot();
             //player.TakeDamage(500f);
 
+        }
+        if (Input.GetKeyDown(KeyCode.F)&&player.MyMana==player.maxMana)
+        {
+            player.MyMana = -50f;
+            Vortex();
         }
     }
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+    void Vortex()
+    {
+        Instantiate(vortexPrefab, firePoint.position, firePoint.rotation);
     }
 }

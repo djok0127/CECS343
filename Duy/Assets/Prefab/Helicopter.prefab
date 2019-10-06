@@ -149,8 +149,10 @@ MonoBehaviour:
   speed: 20
   bombPrefab: {fileID: 2698992841838102752, guid: 44196fa1e90476f419afd30262ee8c92,
     type: 3}
-  policePrefab: {fileID: 6674644633883775585, guid: 5ec79d33bcb0bf14588a03b794733d43,
+  policePrefab: {fileID: 1877899714775900750, guid: 5ec79d33bcb0bf14588a03b794733d43,
     type: 3}
+  bonusHealth: 10
+  bonusDamage: 1
   dropInterval: 1
   deathTime: 10
 --- !u!50 &-6416195125645661828

@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float maxHealth = 100f;
+    public float maxMana = 50f;
+    private float currentMana = 0f;
     private float currentHealth;
     [SerializeField] private Stat health;
+    [SerializeField] private Stat mana;
     public Animator animator;
     private bool isHurt = false;
     private Enemy enemy;
@@ -22,7 +25,24 @@ public class Player : MonoBehaviour
         //health = GameObject.FindGameObjectWithTag("Health").GetComponent<Stat>();
         enemy = GetComponent<Enemy>();
         health.Initialize(maxHealth, maxHealth);
+        mana.Initialize(currentMana, maxMana);
         currentHealth = maxHealth;
+    }
+    public float MyMana
+    {
+        get
+        {
+            return currentMana;
+        }
+        set
+        {
+            currentMana += value;
+            if (currentMana > maxMana)
+            {
+                currentMana = maxMana;
+            }
+            mana.MyCurrentValue = currentMana;
+        }
     }
     public int MyPoints
     {
@@ -51,6 +71,12 @@ public class Player : MonoBehaviour
     {
         animator.SetBool("isHurt", isHurt);
         isHurt = false;
+        if (currentMana >= maxMana)
+        {
+            currentMana = maxMana;
+            mana.MyCurrentValue = maxMana;
+        }
+        
         if (Input.GetKeyDown(KeyCode.H))
         {
             currentHealth+= 10f;

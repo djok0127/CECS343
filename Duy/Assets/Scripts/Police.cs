@@ -5,8 +5,7 @@ using UnityEngine;
 public class Police : MonoBehaviour
 {
     public float attackRange;
-    public Transform firePoint;
-    public GameObject bulletPrefab;
+    
     private float damage;
     public float speed;
     private float lastAttackTime;
@@ -94,17 +93,7 @@ public class Police : MonoBehaviour
             animator.SetBool("meleeAttack", false);
         }   
     }
-    /*void Shoot()
-    {
-        if (Time.time > lastAttackTime + attackDelay)
-        {
-            lastAttackTime = Time.time;
-            animator.SetBool("shooting", true);
-            animator.SetFloat("speed", 0f);
-            animator.SetBool("meleeAttacking", false);
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        }
-    }*/
+    
     
     private IEnumerator PlayAnimInterval(int n, float time)
     {

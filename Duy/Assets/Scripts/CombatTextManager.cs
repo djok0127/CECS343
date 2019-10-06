@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CombatTextManager : MonoBehaviour
 {
     public GameObject textPrefab;
-    public RectTransform canvasTransform;
+    //public RectTransform canvasTransform;
     public float speed;
     public Vector3 direction;
     public float fadeTime;
@@ -23,7 +23,7 @@ public class CombatTextManager : MonoBehaviour
             return instance;
         }
     }
-    public void CreateText(Vector3 position,string text,Color color)
+    public void CreateText(Vector3 position,string text,Color color, RectTransform canvasTransform)
     {
         GameObject sct=(GameObject)Instantiate(textPrefab, position, Quaternion.identity);
         sct.transform.SetParent(canvasTransform);

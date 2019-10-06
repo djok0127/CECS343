@@ -8,17 +8,21 @@ public class Helicopter : MonoBehaviour
     public float speed = 20f;
     public GameObject bombPrefab;
     public GameObject policePrefab;
+    private Enemy enemy;
+    public float bonusHealth=10f;
+    public float bonusDamage = 1f;
     public float dropInterval=1f;
     public float deathTime = 30f;
     private float counter1=0f;
-    private float counter2 = 0f;
+    private float timer = 0f;
     private Rigidbody2D rb;
     private int number;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed;
+        enemy = policePrefab.GetComponent<Enemy>();
+        //rb.velocity = transform.right * speed;
         Random.seed = (int)System.DateTime.Now.Ticks;
         number = Random.Range(1, 101);
     }
@@ -26,28 +30,25 @@ public class Helicopter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+        if (timer > 20)
+        {
+            enemy.maxHealth += bonusHealth;
+            enemy.damageDealt += bonusDamage;
+            //bonusStat += 10f;
+            timer = 0f;
+        }
         counter1 += Time.deltaTime;
-        counter2 += Time.deltaTime;
+        
         if (counter1 >= dropInterval)
         {
-            
+
             //suppose to be 30% that police will drop
 
-            if (number <=30)
-            {
-                DropPolice();
-            }
-            else
-            {
-                DropBomb();
-            }
-            
+            DropPolice();
             counter1 = 0f;
         }
-        if (counter2 >= deathTime)
-        {
-            Destroy(gameObject);
-        }
+        
     }
     void DropBomb()
     {
@@ -55,6 +56,7 @@ public class Helicopter : MonoBehaviour
     }
     void DropPolice()
     {
+        
         Instantiate(policePrefab, dropPoint.position, policePrefab.GetComponent<Transform>().rotation);
     }
 }
