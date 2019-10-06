@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     private bool isHurt = false;
     private Enemy enemy;
-
+    public RectTransform canvasTransform;
     private int points = 0;
     [SerializeField]private Text pointText;
 
@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth = currentHealth - damage;
+        CombatTextManager.Instance.CreateText(transform.position, "-"+damage.ToString(), Color.red, canvasTransform, new Vector3(0f, 1f, 0f));
         health.MyCurrentValue = currentHealth;
         isHurt = true;
         if (currentHealth <= 0)
@@ -80,6 +81,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             currentHealth+= 10f;
+            CombatTextManager.Instance.CreateText(transform.position, "+10", Color.green, canvasTransform, new Vector3(0f, 1f, 0f));
             if (currentHealth >= maxHealth)
             {
                 currentHealth = maxHealth;
@@ -99,6 +101,7 @@ public class Player : MonoBehaviour
             {
                 Enemy enemy = col.gameObject.GetComponent<Enemy>();
                 TakeDamage(enemy.damageDealt);
+                
                 Debug.Log("Player Hit!");
             }
             curTime = delayTime;

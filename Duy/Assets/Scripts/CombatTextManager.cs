@@ -8,7 +8,7 @@ public class CombatTextManager : MonoBehaviour
     public GameObject textPrefab;
     //public RectTransform canvasTransform;
     public float speed;
-    public Vector3 direction;
+    //public Vector3 direction;
     public float fadeTime;
     //singleton pattern
     private static CombatTextManager instance;
@@ -23,7 +23,7 @@ public class CombatTextManager : MonoBehaviour
             return instance;
         }
     }
-    public void CreateText(Vector3 position,string text,Color color, RectTransform canvasTransform)
+    public void CreateText(Vector3 position,string text,Color color, RectTransform canvasTransform, Vector3 direction)
     {
         GameObject sct=(GameObject)Instantiate(textPrefab, position, Quaternion.identity);
         sct.transform.SetParent(canvasTransform);
@@ -35,5 +35,13 @@ public class CombatTextManager : MonoBehaviour
         sct.GetComponent<Text>().color = color;
 
     }
-
+    /*public void CreateWaveText(Vector3 position, string text, Color color, RectTransform canvasTransform)
+    {
+        GameObject sct = (GameObject)Instantiate(textPrefab, position, Quaternion.identity);
+        sct.transform.SetParent(canvasTransform);
+        sct.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+        sct.GetComponent<CombatText>().Initialize(speed, new Vector3(0f,0f,0f), fadeTime);
+        sct.GetComponent<Text>().text = text;
+        sct.GetComponent<Text>().color = color;
+    }*/
 }

@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        CombatTextManager.Instance.CreateText(transform.position, damage.ToString(), Color.red, canvasTransform);
+        CombatTextManager.Instance.CreateText(transform.position, damage.ToString(), Color.red, canvasTransform,new Vector3(0f,1f,0f));
         currentHealth -= damage;
         hitPoint.MyCurrentValue = currentHealth;
         if (currentHealth <= 0)

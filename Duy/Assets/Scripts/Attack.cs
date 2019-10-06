@@ -19,7 +19,7 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            CombatTextManager.Instance.CreateText(transform.position,"Fire!",Color.red, canvasTransform);
+            //CombatTextManager.Instance.CreateText(transform.position,"Fire!",Color.red, canvasTransform,new Vector3(0f,1f,0f));
             Shoot();
             //player.TakeDamage(500f);
 
