@@ -21,6 +21,7 @@ public class Attack : MonoBehaviour
         {
             //CombatTextManager.Instance.CreateText(transform.position,"Fire!",Color.red, canvasTransform,new Vector3(0f,1f,0f));
             Shoot();
+            SoundManager.PlaySound("fire");
             //player.TakeDamage(500f);
 
         }

@@ -63,6 +63,7 @@ public class Controller : MonoBehaviour
             
             //float jumpVelocity = 10f;
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
+            SoundManager.PlaySound("jump");
             animator.SetFloat("yVelocity", rigidbody2d.velocity.y);
             jumpCount--;
             isGrounded = false;

@@ -8,15 +8,15 @@ public class Spawner : MonoBehaviour
     public float statBonus = 10f;
     private float timer = 0f;
     //Enemy game object to spawn
-    public GameObject policePrefab;
-    public GameObject firePrefab;
+    //public GameObject policePrefab;
+    //public GameObject firePrefab;
     public GameObject bossPrefab;
 
     private Enemy enemy;
     // Start is called before the first frame update
     void Start()
     {
-        enemy = policePrefab.GetComponent<Enemy>();
+        Instantiate(bossPrefab, transform.position, transform.rotation);
     }
 
     // Update is called once per frame

@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     {
         CombatTextManager.Instance.CreateText(transform.position, damage.ToString(), Color.red, canvasTransform,new Vector3(0f,1f,0f));
         currentHealth -= damage;
+        SoundManager.PlaySound("hit");
         hitPoint.MyCurrentValue = currentHealth;
         if (currentHealth <= 0)
         {
