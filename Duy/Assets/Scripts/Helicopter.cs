@@ -29,7 +29,7 @@ public class Helicopter : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         enemy = policePrefab.GetComponent<Enemy>();
-        enemy.maxHealth = 10f;
+        enemy.maxHealth = 100f;
         enemy.damageDealt = 1f;
         //rb.velocity = transform.right * speed;
         Random.seed = (int)System.DateTime.Now.Ticks;

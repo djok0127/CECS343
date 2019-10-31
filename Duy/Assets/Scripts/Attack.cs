@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject vortexPrefab;
+    public GameObject slashPrefab;
     public RectTransform canvasTransform;
     private Player player;
     void Start()
@@ -30,6 +31,10 @@ public class Attack : MonoBehaviour
             player.MyMana = -50f;
             Vortex();
         }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            Slash();
+        }
     }
     void Shoot()
     {
@@ -38,5 +43,9 @@ public class Attack : MonoBehaviour
     void Vortex()
     {
         Instantiate(vortexPrefab, firePoint.position, firePoint.rotation);
+    }
+    void Slash()
+    {
+        Instantiate(slashPrefab, firePoint.position, firePoint.rotation);
     }
 }

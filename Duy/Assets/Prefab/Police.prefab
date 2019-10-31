@@ -316,11 +316,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoint: {fileID: 4966332708696857753}
   canvasTransform: {fileID: 2120199495}
-  maxHealth: 60
-  damageDealt: 6
+  maxHealth: 10
+  damageDealt: 1
   points: 10
   deathEffect: {fileID: 329252642569197169, guid: 6d2d29f3326f1e94dbe2042acb6fba13,
     type: 3}
+  knockFromRight: 0
+  knockBackx: 2
 --- !u!1 &5093212984304975391
 GameObject:
   m_ObjectHideFlags: 0

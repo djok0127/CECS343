@@ -20,6 +20,7 @@ public class CombatText : MonoBehaviour
         this.direction = direction;
         this.fadeTime = fadeTime;
         StartCoroutine(FadeOut());
+
     }
     private IEnumerator FadeOut()
     {

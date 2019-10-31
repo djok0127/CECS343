@@ -73,6 +73,20 @@ public class Player : MonoBehaviour
             
         }
     }
+    public void Heal(float value)
+    {
+        currentHealth += value;
+        CombatTextManager.Instance.CreateText(transform.position, value.ToString(), Color.green, canvasTransform, new Vector3(0f, 1f, 0f));
+        if (currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+            health.MyCurrentValue = maxHealth;
+        }
+        else
+        {
+            health.MyCurrentValue = currentHealth;
+        }
+    }
     void Update()
     {
         animator.SetBool("isHurt", isHurt);
@@ -85,17 +99,7 @@ public class Player : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.H))
         {
-            currentHealth+= 10f;
-            CombatTextManager.Instance.CreateText(transform.position, "+10", Color.green, canvasTransform, new Vector3(0f, 1f, 0f));
-            if (currentHealth >= maxHealth)
-            {
-                currentHealth = maxHealth;
-                health.MyCurrentValue = maxHealth;
-            }
-            else
-            {
-                health.MyCurrentValue = currentHealth;
-            }
+            Heal(10);
         }
     }
     void OnCollisionEnter2D(Collision2D col)

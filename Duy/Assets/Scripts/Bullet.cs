@@ -32,12 +32,17 @@ public class Bullet : MonoBehaviour
     {
         Debug.Log(hitInfo.tag);
         Enemy enemy = hitInfo.GetComponent<Enemy>();
+        Boss boss = hitInfo.GetComponent<Boss>();
         //Character player = hitInfo.GetComponent<Character>();
         if (hitInfo.name !="Character"&&hitInfo.name!="Projectile(Clone)")
         {
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
+            }
+            if(boss != null)
+            {
+                boss.TakeDamage(damage);
             }
             Instantiate(impactEffect, transform.position, transform.rotation);
             Destroy(gameObject);

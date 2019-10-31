@@ -17,7 +17,7 @@ public class Police : MonoBehaviour
     private Player player;
     private Rigidbody2D rb;
     public Animator animator;
-
+    private Enemy police;
     //**************
     public LayerMask whatIsGround;
     public Transform groundCheck;
@@ -30,7 +30,7 @@ public class Police : MonoBehaviour
         player= GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rb = GetComponent<Rigidbody2D>();
         damage = GetComponent<Enemy>().damageDealt;
-        
+        police = GetComponent<Enemy>();
     }
 
     // Update is called once per frame
@@ -94,17 +94,6 @@ public class Police : MonoBehaviour
         }   
     }
     
-    
-    private IEnumerator PlayAnimInterval(int n, float time)
-    {
-        animator.SetBool("meleeAttack", true);
-        while (n > 0)
-        {
-            //ani.Play("Police_meele_attack", -1, 0F);
-            --n;
-            yield return new WaitForSeconds(time);
-        }
-    }
     void Flip()
     {
         facingRight = !facingRight;
