@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &203772691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003940428738306423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a571158e785698f40ba59e44c6fab760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceRight: 300
+  distanceUp: 0
+  speed: 20
+--- !u!1001 &8253988736371232912
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4980090158784066023, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_Name
+      value: Helicopter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 498
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 188
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -402.71982
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784672525505817745, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 832622298677388536, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: canvasTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 832622298677388536, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: textPrefab
+      value: 
+      objectReference: {fileID: 7621435307109163985, guid: 39899ffbfc76e43428f02f6f3f7a8d3a,
+        type: 3}
+    - target: {fileID: 832622298677388536, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+        type: 3}
+      propertyPath: waveText
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f4150e30119fbb4b8de6010ba2fed43, type: 3}
+--- !u!1 &4003940428738306423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4980090158784066023, guid: 7f4150e30119fbb4b8de6010ba2fed43,
+    type: 3}
+  m_PrefabInstance: {fileID: 8253988736371232912}
+  m_PrefabAsset: {fileID: 0}

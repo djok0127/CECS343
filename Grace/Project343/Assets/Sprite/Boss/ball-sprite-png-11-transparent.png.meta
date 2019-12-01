@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 57b15419fb4cc4a4480101187ebac3d0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7463584326867451698
+    second: ball-sprite-png-11-transparent_0
+  - first:
+      213: -6106132483521144846
+    second: ball-sprite-png-11-transparent_1
+  - first:
+      213: 6750318475049031177
+    second: ball-sprite-png-11-transparent_2
+  - first:
+      213: 312837187660855878
+    second: ball-sprite-png-11-transparent_3
+  - first:
+      213: -1155463167817748481
+    second: ball-sprite-png-11-transparent_4
+  - first:
+      213: -5981923423572676583
+    second: ball-sprite-png-11-transparent_5
+  - first:
+      213: 6026399201857843353
+    second: ball-sprite-png-11-transparent_6
+  - first:
+      213: 1509135077397292827
+    second: ball-sprite-png-11-transparent_7
+  - first:
+      213: 7828568436199226811
+    second: ball-sprite-png-11-transparent_8
+  - first:
+      213: 5491661221973818175
+    second: ball-sprite-png-11-transparent_9
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 312
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee0fb8cda5a93c4494077a5f16be0cf
+      internalID: 7463584326867451698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 311
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe994f73d0e0ea04595147d9954c4692
+      internalID: -6106132483521144846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_2
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 312
+        width: 68
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562d054d7da83464e8f3fe9342b9d4cc
+      internalID: 6750318475049031177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_3
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 210
+        width: 61
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418f37601068f4241a64922da8e60159
+      internalID: 312837187660855878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 212
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2261bf5fc1a664b8ed0b7f8f7a4e53
+      internalID: -1155463167817748481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 215
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2a70e51d34863428a75f98f2cb84ad
+      internalID: -5981923423572676583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_6
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 113
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b89d2d682863a748805b71a9c316801
+      internalID: 6026399201857843353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_7
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 114
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452369c192e384f419bbcdcb61c0e2ca
+      internalID: 1509135077397292827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_8
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 116
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ba95933ac1998488972184b44a643a
+      internalID: 7828568436199226811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball-sprite-png-11-transparent_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 119
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a05f0755ca89d498618ecf9e55b0fe
+      internalID: 5491661221973818175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6ce9cfd1fcd07e043a111b739f8bcc4a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
