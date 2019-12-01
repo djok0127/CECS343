@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Health
+  - Death
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -17,9 +21,9 @@ TagManager:
   - Ground
   - Fire
   - Edge
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Death
   - 
   - 
   - 
