@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 7698025631032446924}
   - component: {fileID: 7698025631032446927}
   - component: {fileID: 7445513339810763344}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GreenLizard
   m_TagString: Enemy
   m_Icon: {fileID: 0}

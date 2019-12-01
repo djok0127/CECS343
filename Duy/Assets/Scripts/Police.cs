@@ -29,8 +29,9 @@ public class Police : MonoBehaviour
         targetPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         player= GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rb = GetComponent<Rigidbody2D>();
-        damage = GetComponent<Enemy>().damageDealt;
+        
         police = GetComponent<Enemy>();
+        damage = police.damageDealt;
     }
 
     // Update is called once per frame

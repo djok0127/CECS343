@@ -73,6 +73,7 @@ public class Boss : MonoBehaviour
         {
             Instantiate(deathEffect, transform.position, transform.rotation);
             spawner.isDead();
+            SoundManager.PlaySound("deathsound");
             RemoveUI();
             Destroy(gameObject);
         }

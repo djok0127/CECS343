@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Stat mana;
     public Animator animator;
     private bool isHurt = false;
-    private Enemy enemy;
+    
     public RectTransform canvasTransform;
     private int points = 0;
     [SerializeField]private Text pointText;
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         //health = GameObject.FindGameObjectWithTag("Health").GetComponent<Stat>();
-        enemy = GetComponent<Enemy>();
+        
         health.Initialize(maxHealth, maxHealth);
         mana.Initialize(currentMana, maxMana);
         currentHealth = maxHealth;

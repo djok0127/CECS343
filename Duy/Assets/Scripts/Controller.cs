@@ -7,7 +7,7 @@ using System;
 public class Controller : MonoBehaviour
 {
     
-    private Rigidbody2D rigidbody2d;
+    private Rigidbody2D rb;
     
     public float jumpVelocity = 10f;
     public float speed = 5f;
@@ -43,7 +43,7 @@ public class Controller : MonoBehaviour
     private void Awake()
     {
 
-        rigidbody2d = transform.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         jumpCount = jumpTimes;
         
     }
@@ -51,7 +51,7 @@ public class Controller : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
+        
         if (isGrounded)
         {
             jumpCount = jumpTimes;
@@ -62,9 +62,9 @@ public class Controller : MonoBehaviour
         {
             
             //float jumpVelocity = 10f;
-            rigidbody2d.velocity = Vector2.up * jumpVelocity;
+            rb.velocity = Vector2.up * jumpVelocity;
             SoundManager.PlaySound("jump");
-            animator.SetFloat("yVelocity", rigidbody2d.velocity.y);
+            animator.SetFloat("yVelocity", rb.velocity.y);
             jumpCount--;
             isGrounded = false;
             //isJumping = true;
@@ -72,7 +72,7 @@ public class Controller : MonoBehaviour
         //if (isGrounded&&!Input.GetKeyDown(KeyCode.UpArrow))
         //{
         
-        animator.SetFloat("yVelocity", rigidbody2d.velocity.y);
+        animator.SetFloat("yVelocity", rb.velocity.y);
         animator.SetBool("isJumping", !isGrounded);
         
 
@@ -86,7 +86,7 @@ public class Controller : MonoBehaviour
         //Debug.Log(moveInput);
         if (knockBackCount <= 0)
         {
-            rigidbody2d.velocity = new Vector2(moveInput * speed, rigidbody2d.velocity.y);
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
             animator.SetBool("isHurt", false);
         }
         else
@@ -95,11 +95,11 @@ public class Controller : MonoBehaviour
             animator.SetBool("isHurt", true);
             if (knockFromRight)
             {
-                rigidbody2d.velocity = new Vector2(-knockBackx, knockBacky);
+                rb.velocity = new Vector2(-knockBackx, knockBacky);
             }
             if (!knockFromRight)
             {
-                rigidbody2d.velocity = new Vector2(knockBackx, knockBacky);
+                rb.velocity = new Vector2(knockBackx, knockBacky);
             }
             knockBackCount -= Time.deltaTime;
         }

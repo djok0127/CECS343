@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9433962, g: 0.07564971, b: 0.07564971, a: 1}
+  m_Color: {r: 0.9622642, g: 0.9304913, b: 0.9304913, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1632,6 +1632,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973292266}
   m_CullTransparentMesh: 0
+--- !u!1 &1068678693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068678695}
+  - component: {fileID: 1068678694}
+  m_Layer: 0
+  m_Name: ObjectPoolManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1068678694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068678693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a08ce4a1c46f1a4d951927a3316499a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1068678695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068678693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 453.95435, y: 110.94217, z: -444.35248}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085222501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215328b8dd47e45479acc26967620921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleFactor: 0
   spawnInterval: 3
   waveInterval: 5
   statBonus: 10
@@ -2689,7 +2733,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7546272530251230879, guid: 43e49d3245bd8e049ba9ba00180c08b4,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1197326655800341971, guid: 5b3fcd60e9c7b18408793b2cde7d6009, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5b3fcd60e9c7b18408793b2cde7d6009, type: 3}
 --- !u!1001 &4339071500515661226
 PrefabInstance:

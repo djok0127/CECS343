@@ -28,20 +28,10 @@ public class CombatTextManager : MonoBehaviour
         GameObject sct=(GameObject)Instantiate(textPrefab, position, Quaternion.identity);
         sct.transform.SetParent(canvasTransform);
         sct.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
-        //sct.GetComponent<RectTransform>().localWidth = .35f;
-        //sct.GetComponent<RectTransform>().localHeight = .13f;
         sct.GetComponent<CombatText>().Initialize(speed, direction,fadeTime);
         sct.GetComponent<Text>().text = text;
         sct.GetComponent<Text>().color = color;
 
     }
-    /*public void CreateWaveText(Vector3 position, string text, Color color, RectTransform canvasTransform)
-    {
-        GameObject sct = (GameObject)Instantiate(textPrefab, position, Quaternion.identity);
-        sct.transform.SetParent(canvasTransform);
-        sct.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
-        sct.GetComponent<CombatText>().Initialize(speed, new Vector3(0f,0f,0f), fadeTime);
-        sct.GetComponent<Text>().text = text;
-        sct.GetComponent<Text>().color = color;
-    }*/
+    
 }

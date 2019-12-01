@@ -10,7 +10,7 @@ public class MovingPlatform : MonoBehaviour
     public float distanceUp = 0f;
     public float speed = 20f;
     private bool moveRight = true;
-    private bool facingRight = true;
+   
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -44,15 +44,7 @@ public class MovingPlatform : MonoBehaviour
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime,
                 transform.position.y);
         }
-        /*if (transform.position.x > endPos && facingRight)
-        {
-            Flip();
-        }
-        else if (transform.position.x < initialPos && !facingRight)
-        {
-            Flip();
-        }
-     */
+        
     }
     void Flip()
     {

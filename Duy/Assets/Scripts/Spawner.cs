@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Spawner : MonoBehaviour
 {
+    //enemy scaling factor
+    public float scaleFactor;
     //spawn interval, wavecounter
     public float spawnInterval = 2f;
     public float waveInterval = 60f;

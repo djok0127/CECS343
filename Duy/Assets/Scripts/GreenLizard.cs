@@ -30,7 +30,7 @@ public class GreenLizard : MonoBehaviour
     public float attackDelay;
     private float lastAttackTime;
     private float distanceToPlayer;
-    private float distanceFromStart;
+
     private float initialx;
     private float oldPosition;
     private Boss boss;
@@ -55,14 +55,14 @@ public class GreenLizard : MonoBehaviour
     {       
         target= GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         distanceToPlayer = Vector2.Distance(transform.position, target.position);
-        distanceFromStart = Mathf.Abs(transform.position.x - initialx);
+        
 
         //boss mechanic for stage 1
         if (boss.getCurrentHealth() / boss.maxHealth >= .6f)
         {
             if (stageOne)
             {
-                boss.Say("Come Here Little Fox!", 5f);
+                boss.Say("COME HERE LITTLE FOX!", 5f);
                 stageOne = false;
             }
             AttackPattern();
@@ -76,7 +76,9 @@ public class GreenLizard : MonoBehaviour
             {
                 boss.Say("MUHAHAHAHA! YOU THINK YOU ALREADY WON?", 10f);
                 SoundManager.PlaySound("laugh");
+              
                 RangeAttack();
+                
                 stageTwo = false;
             }
             int rand = Random.Range(0, 101);
@@ -85,9 +87,15 @@ public class GreenLizard : MonoBehaviour
                 spCounter += Time.deltaTime;
                 if (spCounter > 2)
                 {
-                    SoundManager.PlaySound("laugh");
+                    //SoundManager.PlaySound("laugh");
+                    boss.Say("TRY DODGING THIS!", 5f);
                     RangeAttack();
                     spCounter = 0f;
+
+                }
+                else
+                {
+                    AttackPattern();
                 }
             }
             else
@@ -165,17 +173,7 @@ public class GreenLizard : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             }
         }
-        if (transform.position.x > oldPosition && !facingRight)
-        {
-            //gameObject.GetComponent<SpriteRenderer>().flipX = false;
-            Flip();
-        }
-        else if (transform.position.x < oldPosition && facingRight)
-        {
-            //gameObject.GetComponent<SpriteRenderer>().flipX = true;
-            Flip();
-        }
-        oldPosition = transform.position.x;
+        PositionCheck();
     }
     void MeleeAttack()
     {
@@ -208,12 +206,28 @@ public class GreenLizard : MonoBehaviour
         }
     }
     void RangeAttack()
-    {        
-        Instantiate(energyWave, attackPoint2.position, attackPoint2.rotation);
+    {
         
+        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        PositionCheck();
+        Instantiate(energyWave, attackPoint2.position, attackPoint2.rotation);
+           
         SoundManager.PlaySound("energywave");
         animator.SetFloat("speed", 0f);
         animator.SetBool("attacking", true);
+        
+    }
+    void PositionCheck()
+    {
+        if (transform.position.x > oldPosition && !facingRight)
+        {
+            Flip();
+        }
+        else if (transform.position.x < oldPosition && facingRight)
+        {
+            Flip();
+        }
+        oldPosition = transform.position.x;
     }
     void Flip()
     {

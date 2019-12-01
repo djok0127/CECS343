@@ -14,10 +14,16 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startDistance = transform.position.x;
-        rb.velocity = transform.right * speed;
+        //startDistance = transform.position.x;
+        //rb.velocity = transform.right * speed;
         
     }
+    void OnEnable()
+    {
+        startDistance = transform.position.x;
+        rb.velocity = transform.right * speed;
+    }
+
     void Update()
     {
         float totalDistance = Mathf.Abs(transform.position.x - startDistance);
@@ -25,7 +31,8 @@ public class Bullet : MonoBehaviour
         {
             Instantiate(impactEffect, transform.position, transform.rotation);
             Debug.Log("I'm getting destroy here!");
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
@@ -45,7 +52,8 @@ public class Bullet : MonoBehaviour
                 boss.TakeDamage(damage);
             }
             Instantiate(impactEffect, transform.position, transform.rotation);
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     

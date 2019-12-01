@@ -13,6 +13,7 @@ public class Attack : MonoBehaviour
     void Start()
     {
         player = GetComponent<Player>();
+        ObjectPool.instance.AddToPool(bulletPrefab, 10);
     }
 
     // Update is called once per frame
@@ -38,7 +39,15 @@ public class Attack : MonoBehaviour
     }
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        //Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = ObjectPool.instance.GetGameObjectByID(bulletPrefab);
+        //Debug.Log(bulletPrefab.GetInstanceId());
+        if (bullet != null)
+        {
+            bullet.transform.position = firePoint.transform.position;
+            bullet.transform.rotation = firePoint.transform.rotation;
+            bullet.SetActive(true);
+        }
     }
     void Vortex()
     {

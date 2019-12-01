@@ -11,13 +11,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -5326558233349263299}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 140, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6567568402344285459}
     m_Position: {x: 530, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7311440266284148105}
-    m_Position: {x: 680, y: -120, z: 0}
+    m_Position: {x: 670, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 919630171920920247}
     m_Position: {x: 540, y: 210, z: 0}
@@ -277,19 +277,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: shooting
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

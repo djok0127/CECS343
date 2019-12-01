@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip attack, jump, hit,swordswing, energywave,roar,laugh;
+    public static AudioClip attack, jump, hit,swordswing, energywave,roar,laugh, death;
     static AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
         energywave = Resources.Load<AudioClip>("energywave");
         roar = Resources.Load<AudioClip>("roar");
         laugh = Resources.Load<AudioClip>("laugh");
+        death = Resources.Load<AudioClip>("deathsound");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -47,6 +48,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case "laugh":
                 audioSrc.PlayOneShot(laugh);
+                break;
+            case "deathsound":
+                audioSrc.PlayOneShot(death);
                 break;
         }
 
