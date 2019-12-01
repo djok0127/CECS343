@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cherry : Item
+public class Gem : Item
 {
     
     void Update()
@@ -10,7 +10,7 @@ public class Cherry : Item
         isCollected = Physics2D.OverlapCircle(transform.position, radius, whatIsPlayer);
         if (isCollected)
         {
-            player.Heal(value);
+            player.MyPoints = value;
             Destroy(gameObject);
         }
         timeCounter += Time.deltaTime;

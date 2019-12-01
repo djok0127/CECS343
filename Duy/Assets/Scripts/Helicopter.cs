@@ -30,7 +30,7 @@ public class Helicopter : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         enemy = policePrefab.GetComponent<Enemy>();
         enemy.maxHealth = 100f;
-        enemy.damageDealt = 1f;
+        //enemy.damage = 1f;
         //rb.velocity = transform.right * speed;
         Random.seed = (int)System.DateTime.Now.Ticks;
         number = Random.Range(1, 101);
@@ -54,7 +54,7 @@ public class Helicopter : MonoBehaviour
             //sct.transform.SetParent(canvasTransform);
             //CombatTextManager.Instance.CreateText(new Vector3(player.position.x, player.position.y + 25f, 0f), "Wave " + waveCount.ToString(), Color.red, canvasTransform, new Vector3(0f, 0f, 0f));
             enemy.maxHealth += bonusHealth;
-            enemy.damageDealt += bonusDamage;
+            //enemy.damage += bonusDamage;
             //bonusStat += 10f;
             timer = 0f;
         }

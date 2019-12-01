@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
             if (col.gameObject.tag.Equals("Enemy"))
             {
                 Enemy enemy = col.gameObject.GetComponent<Enemy>();
-                TakeDamage(enemy.damageDealt);
+                TakeDamage(enemy.damage);
                 
                 Debug.Log("Player Hit!");
             }

@@ -20,7 +20,7 @@ public class HurtPlayerOnContact : MonoBehaviour
             if (col.gameObject.tag.Equals("Player"))
             {
                 Player player = col.gameObject.GetComponent<Player>();
-                player.TakeDamage(enemy.damageDealt);
+                player.TakeDamage(enemy.damage);
                 Debug.Log("Player Hit!");
                 var playerControl = col.gameObject.GetComponent<Controller>();
                 var playerLocation = col.gameObject.GetComponent<Transform>();

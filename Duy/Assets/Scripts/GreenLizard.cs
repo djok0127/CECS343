@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GreenLizard : MonoBehaviour
+public class GreenLizard : Boss
 {
     private Transform initialPos;
     public int maxAttack;
@@ -11,8 +11,8 @@ public class GreenLizard : MonoBehaviour
     public float idleTime;
     private float idleCount = 0f;
     public float moveBackDistance;
-    public float speed = 20f;
-    private bool facingRight=true;
+    
+   
     //add boss special prefab here
     public GameObject slashEffect;
     public Transform attackPoint;
@@ -23,17 +23,15 @@ public class GreenLizard : MonoBehaviour
     
 
     public Animator animator;
-    public float attackRange;
-    private Player player;
+    
+    
     private Transform target;
-    public float damage;
-    public float attackDelay;
-    private float lastAttackTime;
+    
     private float distanceToPlayer;
 
     private float initialx;
-    private float oldPosition;
-    private Boss boss;
+    
+
     //some variable that boss need to be trigger once
     private bool stageOne = true, stageTwo = true, stageThree = true;
     //stage2 counting variables
@@ -42,39 +40,42 @@ public class GreenLizard : MonoBehaviour
     void Start()
     {
         //initialy = GetComponent<Transform>().position.y;
-        boss = GetComponent<Boss>();
+        Initialize();
         initialx = GetComponent<Transform>().position.x;
         oldPosition = initialx;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        
         
     }
 
     // Update is called once per frame
     void Update()
-    {       
-        target= GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    {
+        float currentFill = currentHealth / maxHealth;
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, currentFill, Time.deltaTime * 2f);
+
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         distanceToPlayer = Vector2.Distance(transform.position, target.position);
         
 
         //boss mechanic for stage 1
-        if (boss.getCurrentHealth() / boss.maxHealth >= .6f)
+        if (currentHealth / maxHealth >= .6f)
         {
             if (stageOne)
             {
-                boss.Say("COME HERE LITTLE FOX!", 5f);
+                Say("COME HERE LITTLE FOX!", 5f);
                 stageOne = false;
             }
             AttackPattern();
             
         }
         //boss stage2
-        else if (boss.getCurrentHealth()/boss.maxHealth>=.2f)
+        else if (currentHealth / maxHealth >= .2f)
         {
             //boss will start to use his special attack
             if (stageTwo)
             {
-                boss.Say("MUHAHAHAHA! YOU THINK YOU ALREADY WON?", 10f);
+                Say("MUHAHAHAHA! YOU THINK YOU ALREADY WON?", 10f);
                 SoundManager.PlaySound("laugh");
               
                 RangeAttack();
@@ -88,7 +89,7 @@ public class GreenLizard : MonoBehaviour
                 if (spCounter > 2)
                 {
                     //SoundManager.PlaySound("laugh");
-                    boss.Say("TRY DODGING THIS!", 5f);
+                    Say("TRY DODGING THIS!", 5f);
                     RangeAttack();
                     spCounter = 0f;
 
@@ -111,12 +112,12 @@ public class GreenLizard : MonoBehaviour
             if (stageThree)
             {
                 SoundManager.PlaySound("roar");
-                boss.Say("I WILL SLICE YOU OPEN!!!",10f);
+                Say("I WILL SLICE YOU OPEN!!!",10f);
                 damage = damage * 2;
                 speed = speed * 2;
                 maxAttack = maxAttack * 2;
                 idleTime = idleTime/2;
-                boss.defense = boss.defense * 2;
+                defense = defense * 2;
                 stageThree = false;
 
             }
@@ -175,6 +176,25 @@ public class GreenLizard : MonoBehaviour
         }
         PositionCheck();
     }
+    public override void TakeDamage(float damage)
+    {
+        float damageDealt = damage - defense;
+        if (damageDealt < 0)
+        {
+            damageDealt = 0f;
+        }
+        currentHealth -= damageDealt;
+        CombatTextManager.Instance.CreateText(transform.position, "-" + damageDealt.ToString(), Color.red, canvasTransform, new Vector3(0f, 1f, 0f));
+        if (currentHealth <= 0)
+        {
+            Instantiate(deathEffect, transform.position, transform.rotation);
+            spawner.isDead();
+            player.MyPoints = points;
+            SoundManager.PlaySound("deathsound");
+            RemoveUI();
+            Destroy(gameObject);
+        }
+    }
     void MeleeAttack()
     {
         if (Time.time > lastAttackTime + attackDelay)
@@ -229,9 +249,5 @@ public class GreenLizard : MonoBehaviour
         }
         oldPosition = transform.position.x;
     }
-    void Flip()
-    {
-        facingRight = !facingRight;
-        transform.Rotate(0f, 180f, 0f);
-    }
+    
 }

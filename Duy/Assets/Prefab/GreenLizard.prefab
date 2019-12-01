@@ -172,7 +172,6 @@ GameObject:
   - component: {fileID: 7698025631032446925}
   - component: {fileID: 7698025631032446924}
   - component: {fileID: 7698025631032446927}
-  - component: {fileID: 7445513339810763344}
   m_Layer: 12
   m_Name: GreenLizard
   m_TagString: Enemy
@@ -277,10 +276,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc1d21e48cad7d448b3f361d9f57494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackRange: 15
+  damage: 5
+  speed: 20
+  attackDelay: 1
+  facingRight: 1
+  maxHealth: 500
+  points: 100
+  deathEffect: {fileID: 1760144635258780894, guid: 750e79c3c3e8edd4d98325feac817093,
+    type: 3}
+  knockFromRight: 0
+  knockBackx: 0
+  defense: 3
+  canvasTransform: {fileID: 3546757046541381090}
+  icon: {fileID: 6557374059576437238, guid: 050a7c5bf51a97c4c8ec4f465f8783cb, type: 3}
   maxAttack: 2
   idleTime: 2
   moveBackDistance: 20
-  speed: 20
   slashEffect: {fileID: 1208933398524803708, guid: 5707f975fc5fe754f866e38e5a71ae1e,
     type: 3}
   attackPoint: {fileID: 7698025630963135350}
@@ -288,9 +300,6 @@ MonoBehaviour:
   energyWave: {fileID: 355000768536533354, guid: 6ac7bfd32966dc94299196d11ce06987,
     type: 3}
   animator: {fileID: 7698025631032446912}
-  attackRange: 15
-  damage: 5
-  attackDelay: 1
 --- !u!50 &7698025631032446924
 Rigidbody2D:
   serializedVersion: 4
@@ -338,21 +347,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.59, y: 0.48}
   m_EdgeRadius: 0
---- !u!114 &7445513339810763344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7698025631032446913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 127f63202aea0524ca23fef17c75df41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 500
-  defense: 3
-  canvasTransform: {fileID: 3546757046541381090}
-  icon: {fileID: 6557374059576437238, guid: 050a7c5bf51a97c4c8ec4f465f8783cb, type: 3}
-  deathEffect: {fileID: 1760144635258780894, guid: 750e79c3c3e8edd4d98325feac817093,
-    type: 3}

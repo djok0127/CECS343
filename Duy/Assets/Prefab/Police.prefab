@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 1877899714775900748}
   - component: {fileID: 1877899714775900749}
   - component: {fileID: 1877899714775900752}
-  - component: {fileID: 1877899714775900759}
   m_Layer: 12
   m_Name: Police
   m_TagString: Enemy
@@ -248,8 +247,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 10
+  damage: 3
   speed: 10
   attackDelay: 2
+  facingRight: 1
+  maxHealth: 100
+  points: 10
+  deathEffect: {fileID: 329252642569197169, guid: 6d2d29f3326f1e94dbe2042acb6fba13,
+    type: 3}
+  knockFromRight: 0
+  knockBackx: 5
+  hitPoint: {fileID: 4966332708696857753}
+  canvasTransform: {fileID: 2120199495}
   animator: {fileID: 1877899714775900755}
   whatIsGround:
     serializedVersion: 2
@@ -302,27 +311,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.28, y: 12.29}
   m_EdgeRadius: 0
---- !u!114 &1877899714775900759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877899714775900750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6fd2541417a32549bc64ad5cc3e2d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoint: {fileID: 4966332708696857753}
-  canvasTransform: {fileID: 2120199495}
-  maxHealth: 10
-  damageDealt: 1
-  points: 10
-  deathEffect: {fileID: 329252642569197169, guid: 6d2d29f3326f1e94dbe2042acb6fba13,
-    type: 3}
-  knockFromRight: 0
-  knockBackx: 2
 --- !u!1 &5093212984304975391
 GameObject:
   m_ObjectHideFlags: 0

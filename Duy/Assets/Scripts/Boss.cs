@@ -3,32 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Boss : MonoBehaviour
+public class Boss : Enemy
 {
-    private Image healthBackGround;
-    private Image healthBar;
-    private Text bossText;
+    protected Image healthBackGround;
+    protected Image healthBar;
+    protected Text bossText;
    
     
     //tracking boss hp and defense
-    public float maxHealth;
-    private float currentHealth;
+   
     public float defense;
     public RectTransform canvasTransform;
 
     //boss icon
     //spawn icon
     public GameObject icon;
-    private GameObject sct;
+    protected GameObject sct;
     //xPosition= 376.5
     //yPosition= 147.5
 
     //boss death effect
-    public GameObject deathEffect;
+    
     //dialogue fade out timer
     private float fadeTime;
-    private Spawner spawner;
-    void Start()
+    
+    public void Initialize()
     {
         //This to make UI for boss appeared by adjusting alpha value in color
         healthBackGround=GameObject.FindGameObjectWithTag("BossHealthBackGround").GetComponent<Image>();
@@ -52,32 +51,8 @@ public class Boss : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        float currentFill = currentHealth / maxHealth;
-        
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, currentFill, Time.deltaTime * 2f);
-        
-        
-    }
-    public void TakeDamage(float damage)
-    {
-        float damageDealt = damage - defense;
-        if (damageDealt < 0)
-        {
-            damageDealt = 0f;
-        }
-        currentHealth -= damageDealt;
-        CombatTextManager.Instance.CreateText(transform.position, "-" + damageDealt.ToString(), Color.red, canvasTransform, new Vector3(0f, 1f, 0f));
-        if (currentHealth <= 0)
-        {
-            Instantiate(deathEffect, transform.position, transform.rotation);
-            spawner.isDead();
-            SoundManager.PlaySound("deathsound");
-            RemoveUI();
-            Destroy(gameObject);
-        }
-    }
+    
+    
     //When boss wants to say something
     public void Say(string what,float fadeTime)
     {
@@ -89,7 +64,7 @@ public class Boss : MonoBehaviour
     }
     
     //When boss died this need to be called to adjusting alpha value in color
-    void RemoveUI()
+    public void RemoveUI()
     {
         healthBackGround.color = new Color(healthBackGround.color.r, healthBackGround.color.g, healthBackGround.color.b, 0f);
         healthBar.color = new Color(healthBar.color.r, healthBar.color.g, healthBar.color.b, 0f);

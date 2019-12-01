@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2819443162080716533}
   - component: {fileID: 1613912653668531306}
   - component: {fileID: 5256280631232988362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GreenLizardDeathEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

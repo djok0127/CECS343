@@ -2,22 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Police : MonoBehaviour
+public class Police : Normal
 {
-    public float attackRange;
     
-    private float damage;
-    public float speed;
-    private float lastAttackTime;
-    public float attackDelay;
-    
-    private bool facingRight = true;
     //private float oldPosition = 0f;
     private Transform targetPosition;
-    private Player player;
+    
     private Rigidbody2D rb;
     public Animator animator;
-    private Enemy police;
+    //private Enemy police;
     //**************
     public LayerMask whatIsGround;
     public Transform groundCheck;
@@ -27,16 +20,26 @@ public class Police : MonoBehaviour
     void Start()
     {
         targetPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        player= GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+       
         rb = GetComponent<Rigidbody2D>();
         
-        police = GetComponent<Enemy>();
-        damage = police.damageDealt;
+        //police = GetComponent<Enemy>();
+        
+        hitPoint.Initialize(maxHealth, maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
+        targetPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        if (targetPosition.position.x < transform.position.x)
+        {
+            knockFromRight = false;
+        }
+        else
+        {
+            knockFromRight = true;
+        }
         if (isGrounded)
         {
             
@@ -64,6 +67,30 @@ public class Police : MonoBehaviour
             //oldPosition = transform.position.x;
         }
 
+    }
+    public override void TakeDamage(float damage)
+    {
+        if (knockFromRight)
+        {
+            transform.position = new Vector2(transform.position.x - knockBackx, transform.position.y);
+            Debug.Log("knock back right");
+        }
+        if (!knockFromRight)
+        {
+            transform.position = new Vector2(transform.position.x + knockBackx, transform.position.y);
+            Debug.Log("knock back left");
+        }
+        CombatTextManager.Instance.CreateText(transform.position, damage.ToString(), Color.red, canvasTransform, new Vector3(0f, 1f, 0f));
+        currentHealth -= damage;
+        SoundManager.PlaySound("hit");
+        hitPoint.MyCurrentValue = currentHealth;
+        if (currentHealth <= 0)
+        {
+            spawner.ReduceEnemyCount();
+            player.MyPoints = points;
+            player.MyMana = points;
+            Die();
+        }
     }
     void FixedUpdate()
     {
@@ -95,9 +122,5 @@ public class Police : MonoBehaviour
         }   
     }
     
-    void Flip()
-    {
-        facingRight = !facingRight;
-        transform.Rotate(0f, 180f, 0f);
-    }
+    
 }
