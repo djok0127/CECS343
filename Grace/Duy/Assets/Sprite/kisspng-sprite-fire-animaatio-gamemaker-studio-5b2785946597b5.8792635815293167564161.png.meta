@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: f541bee9c06f9094bae94b7c5c0b313f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3159531108719770705
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_0
+  - first:
+      213: -7364586141651515901
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_1
+  - first:
+      213: 412989835320780348
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_2
+  - first:
+      213: 1024584255332806858
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_3
+  - first:
+      213: -6351854624423832733
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_4
+  - first:
+      213: 483607042153248020
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_5
+  - first:
+      213: -6287753807997887041
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_6
+  - first:
+      213: -7830352599700819434
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_7
+  - first:
+      213: 2275785541820772487
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_8
+  - first:
+      213: -2114951479934395676
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_9
+  - first:
+      213: -3264099686051655140
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_10
+  - first:
+      213: 2591161914481001763
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_11
+  - first:
+      213: 915145613772918596
+    second: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_12
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 224
+        width: 58
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94be1760c18b36548a0d56fe3f879991
+      internalID: -3159531108719770705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_1
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 214
+        width: 123
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1493023fafb9d94caedd57af5a80e3b
+      internalID: -7364586141651515901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_2
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 202
+        width: 165
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d157d70001a5f44b1e0d28698b7e8f
+      internalID: 412989835320780348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 199
+        width: 174
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e22f65149f8d44ca8b33e93e58ecf3
+      internalID: 1024584255332806858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_4
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 193
+        width: 182
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c41e2acabf73c4ba5ba5333605aa40
+      internalID: -6351854624423832733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1
+        width: 181
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741455584be32bc4ba81a34245a7fb2b
+      internalID: 483607042153248020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_6
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1
+        width: 87
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41da7780231cc44a93e2c8bf7bdadf3
+      internalID: -6287753807997887041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_7
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 0
+        width: 71
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b294789a924cee846b20b87397905061
+      internalID: -7830352599700819434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_8
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 0
+        width: 68
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1de2580629461f4b984c6923f1802f6
+      internalID: 2275785541820772487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_9
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 0
+        width: 69
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef4f02a6087053458538df40ef9dd5b
+      internalID: -2114951479934395676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_10
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 136
+        width: 4
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97c6fd0c626eac4abb499a58907d30d
+      internalID: -3264099686051655140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 63
+        width: 4
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbf539492e07c949ae1a9b2118ab49c
+      internalID: 2591161914481001763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-sprite-fire-animaatio-gamemaker-studio-5b2785946597b5.8792635815293167564161_12
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 51
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eeb4b71d0348264da09b57738f90281
+      internalID: 915145613772918596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e6b2e2fd75d42bf41b05e664e6b47938
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
